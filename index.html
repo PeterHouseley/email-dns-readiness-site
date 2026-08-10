@@ -8,11 +8,11 @@
   <meta property="og:title" content="Email DNS Readiness Snapshot" />
   <meta property="og:description" content="Know whether your domain’s public email authentication is helping or hurting trust before it quietly costs you replies." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#314f86" />
+  <meta name="theme-color" content="#173047" />
   <link rel="canonical" href="https://peterhouseley.github.io/email-dns-readiness-site/" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body style="--accent:#314f86;--bg:#edf1f7;--ink:#111827;--muted:#5b6575">
+<body style="--accent:#2f745d;--bg:#eef2ec;--ink:#111827;--muted:#536172">
   <header class="nav">
     <a class="brand" href="#top">Email DNS Readiness Snapshot</a>
     <nav aria-label="Primary navigation">
@@ -44,6 +44,17 @@
           <li>Produces a one-page handoff for the person editing DNS</li>
         </ul>
       </aside>
+    </section>
+
+    <section class="network-plate" aria-label="DNS readiness infrastructure map">
+      <div class="plate-copy">
+        <p class="kicker">Infrastructure view</p>
+        <h2>Your domain already tells a trust story. We turn the public records into an action brief.</h2>
+        <p>Instead of sending a raw DNS dump, the snapshot maps the visible chain: which systems are authorised to send, whether DKIM clues line up, how DMARC is currently behaving, and what a cautious DNS editor should do first.</p>
+      </div>
+      <figure class="routing-map">
+        <img src="assets/generated/dns-routing-map.svg" alt="Stylised DNS routing map showing public DNS records flowing through SPF, DKIM and DMARC checks into a clear fix list." />
+      </figure>
     </section>
 
     <section id="offer" class="grid" aria-label="Offer summary">
