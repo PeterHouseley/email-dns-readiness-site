@@ -64,5 +64,53 @@ svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1120' height='740' viewB
 </svg>
 """
 
+meter_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='560' viewBox='0 0 1180 560' role='img' aria-labelledby='meterTitle meterDesc'>
+  <title id='meterTitle'>Email authentication readiness meter</title>
+  <desc id='meterDesc'>A premium operational trust board showing SPF, DKIM, DMARC and provider alignment as a staged readiness ladder.</desc>
+  <defs>
+    <filter id='soft' x='-15%' y='-20%' width='130%' height='145%'><feDropShadow dx='0' dy='18' stdDeviation='16' flood-color='#0f1f2d' flood-opacity='.16'/></filter>
+    <pattern id='mesh' width='36' height='36' patternUnits='userSpaceOnUse'><path d='M36 0H0v36' fill='none' stroke='#173047' stroke-opacity='.07'/></pattern>
+    <linearGradient id='brass' x1='0' x2='1'><stop offset='0' stop-color='#d7b75d'/><stop offset='1' stop-color='#9c7a28'/></linearGradient>
+  </defs>
+  <rect width='1180' height='560' rx='40' fill='#f4f1e6'/>
+  <rect x='24' y='24' width='1132' height='512' rx='32' fill='url(#mesh)'/>
+  <g filter='url(#soft)'>
+    <rect x='70' y='70' width='1040' height='410' rx='30' fill='#fffdf7' stroke='#173047' stroke-opacity='.16'/>
+  </g>
+  <g font-family='Georgia,serif' fill='#132338'>
+    <text x='104' y='124' font-size='38' font-weight='700'>authentication readiness board</text>
+    <text x='104' y='162' font-size='20' fill='#536172'>public record evidence translated into one safe operating decision</text>
+  </g>
+  <g transform='translate(104 218)' font-family='ui-sans-serif, system-ui, sans-serif'>
+    <line x1='0' y1='88' x2='888' y2='88' stroke='#d8d4c3' stroke-width='18' stroke-linecap='round'/>
+    <line x1='0' y1='88' x2='628' y2='88' stroke='#2f745d' stroke-width='18' stroke-linecap='round'/>
+    <g fill='#fffdf7' stroke-width='5'>
+      <circle cx='0' cy='88' r='44' stroke='#2f745d'/>
+      <circle cx='296' cy='88' r='44' stroke='#2f745d'/>
+      <circle cx='592' cy='88' r='44' stroke='#c89d2c'/>
+      <circle cx='888' cy='88' r='44' stroke='#9a4537'/>
+    </g>
+    <g fill='#132338' font-weight='900' font-size='18' text-anchor='middle'>
+      <text x='0' y='95'>SPF</text><text x='296' y='95'>DKIM</text><text x='592' y='95'>DMARC</text><text x='888' y='95'>ALIGN</text>
+    </g>
+    <g fill='#536172' font-size='17' text-anchor='middle'>
+      <text x='0' y='166'>who can send</text><text x='296' y='166'>message signature</text><text x='592' y='166'>domain policy</text><text x='888' y='166'>safe rollout</text>
+    </g>
+  </g>
+  <g transform='translate(826 92)' font-family='ui-monospace, Menlo, Consolas, monospace'>
+    <rect x='0' y='0' width='250' height='90' rx='18' fill='#173047'/>
+    <text x='24' y='36' fill='#9fcbb9' font-size='18'>STATUS: AMBER</text>
+    <text x='24' y='66' fill='#fffdf7' font-size='16'>actionable, not urgent panic</text>
+  </g>
+  <g font-family='ui-sans-serif, system-ui, sans-serif' font-size='18' fill='#132338'>
+    <rect x='104' y='405' width='304' height='42' rx='21' fill='#edf5ef' stroke='#2f745d' stroke-opacity='.24'/><text x='126' y='432'>no logins requested</text>
+    <rect x='438' y='405' width='304' height='42' rx='21' fill='#f5efd8' stroke='url(#brass)' stroke-opacity='.38'/><text x='460' y='432'>DNS editor handoff note</text>
+    <rect x='772' y='405' width='304' height='42' rx='21' fill='#f2e2dc' stroke='#9a4537' stroke-opacity='.24'/><text x='794' y='432'>change risk called out</text>
+  </g>
+</svg>
+"""
+
 (OUT / "dns-routing-map.svg").write_text(svg, encoding="utf-8")
+(OUT / "auth-stack-meter.svg").write_text(meter_svg, encoding="utf-8")
 print(OUT / "dns-routing-map.svg")
+print(OUT / "auth-stack-meter.svg")

@@ -18,4 +18,4 @@ The infrastructure map is generated from source so the visual system stays edita
 python3 scripts/build-design-assets.py
 ```
 
-This writes `assets/generated/dns-routing-map.svg`.
+This writes `assets/generated/dns-routing-map.svg` and `assets/generated/auth-stack-meter.svg`.
