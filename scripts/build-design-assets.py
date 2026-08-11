@@ -110,7 +110,51 @@ meter_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='560'
 </svg>
 """
 
+resolver_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='650' viewBox='0 0 1180 650' role='img' aria-labelledby='resolverTitle resolverDesc'>
+  <title id='resolverTitle'>Public resolver verification receipt</title>
+  <desc id='resolverDesc'>A professional DNS verification receipt showing SPF, DKIM and DMARC records checked across Google, Cloudflare and authoritative DNS before a client handoff.</desc>
+  <defs>
+    <filter id='receiptShadow' x='-18%' y='-20%' width='136%' height='145%'><feDropShadow dx='0' dy='20' stdDeviation='18' flood-color='#0b1f2a' flood-opacity='.22'/></filter>
+    <pattern id='resolverGrid' width='38' height='38' patternUnits='userSpaceOnUse'><path d='M38 0H0v38' fill='none' stroke='#d6e3dd' stroke-opacity='.18'/></pattern>
+    <linearGradient id='resolverInk' x1='0' x2='1'><stop offset='0' stop-color='#163348'/><stop offset='1' stop-color='#2f745d'/></linearGradient>
+  </defs>
+  <rect width='1180' height='650' rx='44' fill='#081a22'/>
+  <rect x='28' y='28' width='1124' height='594' rx='34' fill='url(#resolverGrid)' stroke='#9ed9ca' stroke-opacity='.15'/>
+  <g filter='url(#receiptShadow)'>
+    <rect x='78' y='72' width='1024' height='506' rx='32' fill='#fffdf7'/>
+  </g>
+  <g font-family='Georgia,serif' fill='#132338'>
+    <text x='118' y='132' font-size='40' font-weight='700'>resolver verification receipt</text>
+    <text x='118' y='170' font-size='20' fill='#596879'>evidence that the fix list was checked outside the client inbox thread</text>
+  </g>
+  <g transform='translate(118 218)' font-family='ui-sans-serif, system-ui, sans-serif'>
+    <rect width='944' height='64' rx='16' fill='url(#resolverInk)'/>
+    <g fill='#e9fbf8' font-size='15' font-weight='900' letter-spacing='.08em'>
+      <text x='24' y='40'>CHECK</text><text x='258' y='40'>GOOGLE 8.8.8.8</text><text x='504' y='40'>CLOUDFLARE 1.1.1.1</text><text x='756' y='40'>AUTHORITATIVE</text>
+    </g>
+    <g font-size='18' fill='#132338'>
+      <g transform='translate(0 86)'>
+        <rect width='944' height='58' rx='14' fill='#eef6f1'/><text x='24' y='36' font-weight='900'>SPF TXT</text><text x='278' y='36'>single record</text><text x='526' y='36'>single record</text><text x='784' y='36' fill='#2f745d' font-weight='900'>PASS</text>
+      </g>
+      <g transform='translate(0 158)'>
+        <rect width='944' height='58' rx='14' fill='#f7efd7'/><text x='24' y='36' font-weight='900'>DKIM selector</text><text x='278' y='36'>provider clue</text><text x='526' y='36'>needs confirm</text><text x='784' y='36' fill='#9c721d' font-weight='900'>AMBER</text>
+      </g>
+      <g transform='translate(0 230)'>
+        <rect width='944' height='58' rx='14' fill='#f1ded8'/><text x='24' y='36' font-weight='900'>DMARC TXT</text><text x='278' y='36'>p=none</text><text x='526' y='36'>p=none</text><text x='784' y='36' fill='#98493b' font-weight='900'>POLICY GAP</text>
+      </g>
+    </g>
+    <g transform='translate(0 330)' font-family='ui-monospace, Menlo, Consolas, monospace'>
+      <rect width='944' height='70' rx='18' fill='#173047'/>
+      <text x='24' y='30' fill='#a7d8ca' font-size='16'>HANDOFF NOTE</text>
+      <text x='24' y='52' fill='#fffdf7' font-size='17'>No DNS credentials requested · owner approves edits · after-change receipt included</text>
+    </g>
+  </g>
+</svg>
+"""
+
 (OUT / "dns-routing-map.svg").write_text(svg, encoding="utf-8")
 (OUT / "auth-stack-meter.svg").write_text(meter_svg, encoding="utf-8")
+(OUT / "resolver-verification-receipt.svg").write_text(resolver_svg, encoding="utf-8")
 print(OUT / "dns-routing-map.svg")
 print(OUT / "auth-stack-meter.svg")
+print(OUT / "resolver-verification-receipt.svg")
