@@ -270,6 +270,54 @@ tls_seal_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='7
   </g>
 </svg>
 """
+sender_inventory_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='700' viewBox='0 0 1180 700' role='img' aria-labelledby='inventoryTitle inventoryDesc'>
+  <title id='inventoryTitle'>Sender inventory manifest</title>
+  <desc id='inventoryDesc'>A professional infrastructure manifest showing business email senders checked against SPF, DKIM, DMARC and owner-approved DNS changes.</desc>
+  <defs>
+    <filter id='manifestShadow' x='-18%' y='-18%' width='136%' height='140%'><feDropShadow dx='0' dy='26' stdDeviation='22' flood-color='#06141b' flood-opacity='.28'/></filter>
+    <pattern id='ledgerGrid' width='34' height='34' patternUnits='userSpaceOnUse'><path d='M34 0H0v34' fill='none' stroke='#173047' stroke-opacity='.065'/></pattern>
+    <linearGradient id='laneGreen' x1='0' x2='1'><stop offset='0' stop-color='#2f745d'/><stop offset='1' stop-color='#8fd7b2'/></linearGradient>
+    <linearGradient id='laneAmber' x1='0' x2='1'><stop offset='0' stop-color='#b98221'/><stop offset='1' stop-color='#f2cf78'/></linearGradient>
+  </defs>
+  <rect width='1180' height='700' rx='46' fill='#eef2ec'/>
+  <rect x='28' y='28' width='1124' height='644' rx='34' fill='url(#ledgerGrid)'/>
+  <g filter='url(#manifestShadow)'>
+    <rect x='72' y='64' width='1036' height='568' rx='34' fill='#fffdf7' stroke='#173047' stroke-opacity='.16'/>
+  </g>
+  <g font-family='Georgia,serif' fill='#132338'>
+    <text x='112' y='130' font-size='44' font-weight='700'>sender inventory manifest</text>
+    <text x='112' y='170' font-size='21' fill='#536172'>every system allowed to send as the domain, logged before DNS is touched</text>
+  </g>
+  <g transform='translate(112 220)' font-family='ui-sans-serif, system-ui, sans-serif'>
+    <rect width='956' height='72' rx='20' fill='#173047'/>
+    <g fill='#e9fbf8' font-size='15' font-weight='950' letter-spacing='.09em'>
+      <text x='24' y='44'>SENDER</text><text x='290' y='44'>ROLE</text><text x='516' y='44'>DNS CLUE</text><text x='760' y='44'>ACTION</text>
+    </g>
+    <g font-size='18' fill='#132338'>
+      <g transform='translate(0 94)'>
+        <rect width='956' height='64' rx='18' fill='#eef6f1'/><rect width='8' height='64' rx='4' fill='url(#laneGreen)'/>
+        <text x='24' y='40' font-weight='950'>Microsoft 365</text><text x='290' y='40'>staff mail</text><text x='516' y='40'>spf.protection.outlook.com</text><text x='760' y='40' fill='#2f745d' font-weight='950'>keep</text>
+      </g>
+      <g transform='translate(0 174)'>
+        <rect width='956' height='64' rx='18' fill='#fff4d8'/><rect width='8' height='64' rx='4' fill='url(#laneAmber)'/>
+        <text x='24' y='40' font-weight='950'>Mailchimp</text><text x='290' y='40'>newsletter</text><text x='516' y='40'>DKIM selector clue</text><text x='760' y='40' fill='#9c721d' font-weight='950'>confirm</text>
+      </g>
+      <g transform='translate(0 254)'>
+        <rect width='956' height='64' rx='18' fill='#eef6f1'/><rect width='8' height='64' rx='4' fill='url(#laneGreen)'/>
+        <text x='24' y='40' font-weight='950'>Website forms</text><text x='290' y='40'>quotes / bookings</text><text x='516' y='40'>SMTP provider</text><text x='760' y='40' fill='#2f745d' font-weight='950'>document</text>
+      </g>
+      <g transform='translate(0 334)'>
+        <rect width='956' height='64' rx='18' fill='#f1ded8'/><rect width='8' height='64' rx='4' fill='#9a4537'/>
+        <text x='24' y='40' font-weight='950'>Old CRM</text><text x='290' y='40'>unknown</text><text x='516' y='40'>obsolete include?</text><text x='760' y='40' fill='#98493b' font-weight='950'>remove only if approved</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(112 580)' font-family='ui-monospace, Menlo, Consolas, monospace'>
+    <rect width='956' height='42' rx='21' fill='#173047'/>
+    <text x='26' y='27' fill='#a8d8ce' font-size='16'>fix rule: no SPF simplification until the sending inventory is signed off by the owner</text>
+  </g>
+</svg>
+"""
 
 
 (OUT / "dns-routing-map.svg").write_text(svg, encoding="utf-8")
@@ -277,5 +325,6 @@ tls_seal_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='7
 (OUT / "resolver-verification-receipt.svg").write_text(resolver_svg, encoding="utf-8")
 (OUT / "email-trust-incident-drill.svg").write_text(incident_svg, encoding="utf-8")
 (OUT / "domain-trust-seal.svg").write_text(tls_seal_svg, encoding="utf-8")
-for name in ["dns-routing-map.svg", "auth-stack-meter.svg", "resolver-verification-receipt.svg", "email-trust-incident-drill.svg", "domain-trust-seal.svg"]:
+(OUT / "sender-inventory-manifest.svg").write_text(sender_inventory_svg, encoding="utf-8")
+for name in ["dns-routing-map.svg", "auth-stack-meter.svg", "resolver-verification-receipt.svg", "email-trust-incident-drill.svg", "domain-trust-seal.svg", "sender-inventory-manifest.svg"]:
     print(OUT / name)
