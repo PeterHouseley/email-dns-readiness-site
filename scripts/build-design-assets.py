@@ -205,11 +205,77 @@ incident_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='6
 </svg>
 """
 
+
+tls_seal_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='700' viewBox='0 0 1180 700' role='img' aria-labelledby='sealTitle sealDesc'>
+  <title id='sealTitle'>Email domain trust seal and sending lane chart</title>
+  <desc id='sealDesc'>A premium infrastructure-style email trust seal showing SPF, DKIM, DMARC, MX and resolver evidence flowing into a client-safe handoff pack.</desc>
+  <defs>
+    <filter id='deepShadow' x='-18%' y='-18%' width='136%' height='140%'><feDropShadow dx='0' dy='24' stdDeviation='20' flood-color='#04131a' flood-opacity='.32'/></filter>
+    <filter id='stampBlur'><feGaussianBlur stdDeviation='10'/></filter>
+    <pattern id='tinyGrid' width='30' height='30' patternUnits='userSpaceOnUse'><path d='M30 0H0v30' fill='none' stroke='#94d8c9' stroke-opacity='.12'/></pattern>
+    <linearGradient id='lane' x1='0' x2='1'><stop offset='0' stop-color='#72e2a3'/><stop offset='.55' stop-color='#ffd36e'/><stop offset='1' stop-color='#ff8f83'/></linearGradient>
+    <linearGradient id='slate' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#0a1d25'/><stop offset='1' stop-color='#163d39'/></linearGradient>
+  </defs>
+  <rect width='1180' height='700' rx='46' fill='#071a22'/>
+  <rect x='28' y='28' width='1124' height='644' rx='34' fill='url(#tinyGrid)' stroke='#9ed9ca' stroke-opacity='.16'/>
+  <circle cx='900' cy='120' r='180' fill='#46d6b1' opacity='.14' filter='url(#stampBlur)'/>
+  <g filter='url(#deepShadow)'>
+    <rect x='70' y='70' width='1040' height='560' rx='34' fill='url(#slate)' stroke='#9ed9ca' stroke-opacity='.22'/>
+  </g>
+  <g font-family='Georgia,serif'>
+    <text x='112' y='134' fill='#e9fbf8' font-size='44' font-weight='700'>domain trust seal</text>
+    <text x='112' y='174' fill='#a8d8ce' font-size='21'>a client-readable proof pack for authentication, routing and safe change control</text>
+  </g>
+  <g transform='translate(112 226)' font-family='ui-sans-serif, system-ui, sans-serif'>
+    <rect x='0' y='0' width='956' height='104' rx='26' fill='#ffffff' fill-opacity='.07' stroke='#9ed9ca' stroke-opacity='.22'/>
+    <path d='M64 52H884' stroke='url(#lane)' stroke-width='10' stroke-linecap='round'/>
+    <g font-weight='950' font-size='16' text-anchor='middle'>
+      <g transform='translate(64 52)'><circle r='31' fill='#0d2a2a' stroke='#72e2a3' stroke-width='5'/><text y='6' fill='#e9fbf8'>SPF</text></g>
+      <g transform='translate(269 52)'><circle r='31' fill='#0d2a2a' stroke='#72e2a3' stroke-width='5'/><text y='6' fill='#e9fbf8'>MX</text></g>
+      <g transform='translate(474 52)'><circle r='31' fill='#0d2a2a' stroke='#ffd36e' stroke-width='5'/><text y='6' fill='#e9fbf8'>DKIM</text></g>
+      <g transform='translate(679 52)'><circle r='31' fill='#0d2a2a' stroke='#ffd36e' stroke-width='5'/><text y='6' fill='#e9fbf8'>DMARC</text></g>
+      <g transform='translate(884 52)'><circle r='31' fill='#0d2a2a' stroke='#ff8f83' stroke-width='5'/><text y='6' fill='#e9fbf8'>ALIGN</text></g>
+    </g>
+  </g>
+  <g transform='translate(112 382)' font-family='ui-sans-serif, system-ui, sans-serif'>
+    <g>
+      <rect width='292' height='138' rx='24' fill='#fffdf7'/>
+      <text x='24' y='38' font-size='15' font-weight='950' letter-spacing='.12em' fill='#2f745d'>EVIDENCE</text>
+      <text x='24' y='76' font-size='25' font-weight='900' fill='#132338'>public records only</text>
+      <text x='24' y='108' font-size='17' fill='#536172'>No DNS login, no mailbox access.</text>
+    </g>
+    <g transform='translate(332 0)'>
+      <rect width='292' height='138' rx='24' fill='#fff7de'/>
+      <text x='24' y='38' font-size='15' font-weight='950' letter-spacing='.12em' fill='#9c721d'>CHANGE ORDER</text>
+      <text x='24' y='76' font-size='25' font-weight='900' fill='#132338'>safe edit sequence</text>
+      <text x='24' y='108' font-size='17' fill='#6f5a2a'>Risk called out before action.</text>
+    </g>
+    <g transform='translate(664 0)'>
+      <rect width='292' height='138' rx='24' fill='#eaf7f2'/>
+      <text x='24' y='38' font-size='15' font-weight='950' letter-spacing='.12em' fill='#2f745d'>RECEIPT</text>
+      <text x='24' y='76' font-size='25' font-weight='900' fill='#132338'>resolver readback</text>
+      <text x='24' y='108' font-size='17' fill='#536172'>Google, Cloudflare, authoritative.</text>
+    </g>
+  </g>
+  <g transform='translate(830 96) rotate(-8)' font-family='ui-monospace, Menlo, Consolas, monospace'>
+    <circle cx='110' cy='110' r='92' fill='none' stroke='#ffd36e' stroke-width='5' stroke-dasharray='8 7'/>
+    <circle cx='110' cy='110' r='68' fill='#ffd36e' fill-opacity='.08' stroke='#ffd36e' stroke-width='2'/>
+    <text x='110' y='96' text-anchor='middle' fill='#ffd36e' font-size='16' font-weight='950'>CLIENT SAFE</text>
+    <text x='110' y='122' text-anchor='middle' fill='#e9fbf8' font-size='24' font-weight='950'>HANDOFF</text>
+    <text x='110' y='148' text-anchor='middle' fill='#a8d8ce' font-size='13' font-weight='900'>NO PASSWORDS</text>
+  </g>
+  <g transform='translate(112 558)' font-family='ui-monospace, Menlo, Consolas, monospace'>
+    <rect width='956' height='42' rx='21' fill='#ffffff' fill-opacity='.08' stroke='#9ed9ca' stroke-opacity='.18'/>
+    <text x='26' y='27' fill='#a8d8ce' font-size='16'>trust route: lookup → diagnose → owner approves → DNS editor changes → resolver receipt</text>
+  </g>
+</svg>
+"""
+
+
 (OUT / "dns-routing-map.svg").write_text(svg, encoding="utf-8")
 (OUT / "auth-stack-meter.svg").write_text(meter_svg, encoding="utf-8")
 (OUT / "resolver-verification-receipt.svg").write_text(resolver_svg, encoding="utf-8")
 (OUT / "email-trust-incident-drill.svg").write_text(incident_svg, encoding="utf-8")
-print(OUT / "dns-routing-map.svg")
-print(OUT / "auth-stack-meter.svg")
-print(OUT / "resolver-verification-receipt.svg")
-print(OUT / "email-trust-incident-drill.svg")
+(OUT / "domain-trust-seal.svg").write_text(tls_seal_svg, encoding="utf-8")
+for name in ["dns-routing-map.svg", "auth-stack-meter.svg", "resolver-verification-receipt.svg", "email-trust-incident-drill.svg", "domain-trust-seal.svg"]:
+    print(OUT / name)
