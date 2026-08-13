@@ -295,6 +295,26 @@
       </div>
     </section>
 
+    <section class="ttl-runbook" aria-label="DNS TTL rollback runbook">
+      <div class="ttl-copy">
+        <p class="kicker">New conversion layer · TTL rollback runbook</p>
+        <h2>Make email authentication changes feel reversible before the domain owner approves them.</h2>
+        <p>This pass adds a missing trust detail for cautious buyers: the fix pack now shows TTL notes, staged resolver readbacks and rollback wording, so SPF, DKIM or DMARC edits feel governed rather than experimental.</p>
+        <div class="ttl-rules" aria-label="TTL and rollback safeguards">
+          <span><b>01</b> Capture TTL + current value</span>
+          <span><b>02</b> Stage owner-approved edit</span>
+          <span><b>03</b> Verify and write rollback note</span>
+        </div>
+      </div>
+      <div class="ttl-ticket" role="img" aria-label="DNS TTL rollback runbook ticket">
+        <div class="ttl-ribbon">DNS CHANGE RUNBOOK</div>
+        <code>before: TXT @ v=spf1 include:_spf.google.com ~all · TTL 3600</code>
+        <code>edit: add approved sender only after owner sign-off</code>
+        <code>rollback: restore previous TXT if resolver checks fail</code>
+        <span>receipt closes only after public readback</span>
+      </div>
+    </section>
+
     <section class="conversion">
       <p class="kicker">Fast validation path</p>
       <h2>Start with one domain. Upgrade only if the fix list is useful.</h2>
