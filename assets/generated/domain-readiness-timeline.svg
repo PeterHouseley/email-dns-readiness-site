@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 680" role="img" aria-labelledby="title desc">
+  <title id="title">Domain readiness timeline</title>
+  <desc id="desc">A premium email infrastructure timeline showing pre-change DNS evidence, change freeze, owner approval, resolver verification and monitoring receipt.</desc>
+  <defs>
+    <filter id="shadow" x="-15%" y="-18%" width="130%" height="145%"><feDropShadow dx="0" dy="28" stdDeviation="24" flood-color="#04131a" flood-opacity=".34"/></filter>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0v44" fill="none" stroke="#9ed9ca" stroke-opacity=".09"/></pattern>
+    <linearGradient id="lane" x1="0" x2="1"><stop offset="0" stop-color="#72e2a3"/><stop offset=".48" stop-color="#ffd36e"/><stop offset="1" stop-color="#8fe1ff"/></linearGradient>
+  </defs>
+  <rect width="1180" height="680" rx="46" fill="#06161d"/>
+  <rect x="30" y="30" width="1120" height="620" rx="36" fill="url(#grid)" stroke="#9ed9ca" stroke-opacity=".15"/>
+  <g font-family="Georgia,serif" fill="#e9fbf8">
+    <text x="76" y="92" font-size="40" font-weight="700">domain readiness timeline</text>
+    <text x="76" y="130" font-size="20" fill="#a7d8ca">the paid monitoring story: fewer risky edits, clearer evidence, calmer renewals</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="76" y="178" width="1028" height="386" rx="32" fill="#fffdf7"/>
+  </g>
+  <path d="M150 354H1030" stroke="url(#lane)" stroke-width="12" stroke-linecap="round"/>
+  <g font-family="ui-sans-serif,system-ui,sans-serif" fill="#132338">
+    <g transform="translate(116 250)">
+      <circle cx="34" cy="104" r="44" fill="#eef6f1" stroke="#2f745d" stroke-width="5"/>
+      <text x="34" y="111" text-anchor="middle" font-size="18" font-weight="950">01</text>
+      <text x="0" y="194" font-size="20" font-weight="900">baseline</text>
+      <text x="0" y="222" font-size="15" fill="#596879" font-weight="750">SPF / DKIM / DMARC / MX receipt</text>
+    </g>
+    <g transform="translate(338 250)">
+      <circle cx="34" cy="104" r="44" fill="#f7efd7" stroke="#c89d2c" stroke-width="5"/>
+      <text x="34" y="111" text-anchor="middle" font-size="18" font-weight="950">02</text>
+      <text x="0" y="194" font-size="20" font-weight="900">freeze</text>
+      <text x="0" y="222" font-size="15" fill="#596879" font-weight="750">no blind DNS tidy-up</text>
+    </g>
+    <g transform="translate(560 250)">
+      <circle cx="34" cy="104" r="44" fill="#eef6f1" stroke="#2f745d" stroke-width="5"/>
+      <text x="34" y="111" text-anchor="middle" font-size="18" font-weight="950">03</text>
+      <text x="0" y="194" font-size="20" font-weight="900">approve</text>
+      <text x="0" y="222" font-size="15" fill="#596879" font-weight="750">owner signs sender list</text>
+    </g>
+    <g transform="translate(782 250)">
+      <circle cx="34" cy="104" r="44" fill="#e7f7fb" stroke="#4eb7d8" stroke-width="5"/>
+      <text x="34" y="111" text-anchor="middle" font-size="18" font-weight="950">04</text>
+      <text x="0" y="194" font-size="20" font-weight="900">verify</text>
+      <text x="0" y="222" font-size="15" fill="#596879" font-weight="750">public resolver readback</text>
+    </g>
+    <g transform="translate(958 220)">
+      <rect width="104" height="146" rx="22" fill="#173047"/>
+      <text x="52" y="54" text-anchor="middle" fill="#a7d8ca" font-family="ui-monospace,Menlo,monospace" font-size="13" font-weight="950">MONTHLY</text>
+      <text x="52" y="88" text-anchor="middle" fill="#fffdf7" font-size="28" font-weight="950">£49</text>
+      <text x="52" y="118" text-anchor="middle" fill="#a7d8ca" font-size="13" font-weight="850">watch</text>
+    </g>
+  </g>
+  <g font-family="ui-monospace,Menlo,Consolas,monospace">
+    <rect x="118" y="486" width="838" height="48" rx="18" fill="#173047"/>
+    <text x="146" y="517" fill="#e9fbf8" font-size="16" font-weight="900">SNAPSHOT → SAFE FIX PACK → MONTHLY DRIFT CHECK · NO PASSWORDS · OWNER-APPROVED CHANGES ONLY</text>
+  </g>
+</svg>
