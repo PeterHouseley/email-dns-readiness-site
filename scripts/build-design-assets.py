@@ -320,6 +320,67 @@ sender_inventory_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' h
 """
 
 
+
+mail_auth_change_lab_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='720' viewBox='0 0 1180 720' role='img' aria-labelledby='labTitle labDesc'>
+  <title id='labTitle'>Email authentication change lab</title>
+  <desc id='labDesc'>A controlled infrastructure change lab showing current mail DNS evidence, proposed edits, owner approval, resolver readback and rollback notes.</desc>
+  <defs>
+    <filter id='labShadow' x='-14%' y='-18%' width='128%' height='145%'><feDropShadow dx='0' dy='24' stdDeviation='20' flood-color='#0b1f2a' flood-opacity='.20'/></filter>
+    <pattern id='benchGrid' width='42' height='42' patternUnits='userSpaceOnUse'><path d='M42 0H0v42' fill='none' stroke='#173047' stroke-opacity='.065'/></pattern>
+    <linearGradient id='safeLane' x1='0' x2='1'><stop offset='0' stop-color='#2f745d'/><stop offset='1' stop-color='#72d7a2'/></linearGradient>
+    <linearGradient id='amberLane' x1='0' x2='1'><stop offset='0' stop-color='#d7ad4f'/><stop offset='1' stop-color='#f3d57b'/></linearGradient>
+  </defs>
+  <rect width='1180' height='720' rx='46' fill='#eef2ec'/>
+  <rect x='28' y='28' width='1124' height='664' rx='34' fill='url(#benchGrid)' stroke='#173047' stroke-opacity='.10'/>
+  <g font-family='Georgia,serif' fill='#132338'>
+    <text x='70' y='96' font-size='42' font-weight='700'>mail authentication change lab</text>
+    <text x='70' y='136' font-size='20' fill='#536172'>current evidence, proposed DNS edits, owner approval and resolver readback in one controlled ticket</text>
+  </g>
+  <g transform='translate(70 184)' filter='url(#labShadow)' font-family='ui-sans-serif, system-ui, sans-serif'>
+    <rect width='1040' height='416' rx='32' fill='#fffdf7' stroke='#173047' stroke-opacity='.14'/>
+    <g transform='translate(34 34)'>
+      <rect width='276' height='326' rx='24' fill='#f0f6f1' stroke='#173047' stroke-opacity='.12'/>
+      <text x='22' y='42' font-family='ui-monospace, Menlo, monospace' font-size='14' font-weight='950' letter-spacing='.12em' fill='#2f745d'>BEFORE SNAPSHOT</text>
+      <g font-size='18' fill='#132338' font-weight='850'>
+        <rect x='22' y='76' width='220' height='46' rx='14' fill='#fffdf7'/><text x='40' y='105'>SPF: one record</text>
+        <rect x='22' y='140' width='220' height='46' rx='14' fill='#fffdf7'/><text x='40' y='169'>DKIM: selector clue</text>
+        <rect x='22' y='204' width='220' height='46' rx='14' fill='#fff4d8'/><text x='40' y='233'>DMARC: p=none</text>
+      </g>
+      <text x='22' y='292' font-size='15' fill='#536172' font-weight='800'>Public evidence only. No logins.</text>
+    </g>
+    <g transform='translate(382 34)'>
+      <rect width='276' height='326' rx='24' fill='#102f38' stroke='#9ed9ca' stroke-opacity='.18'/>
+      <text x='22' y='42' font-family='ui-monospace, Menlo, monospace' font-size='14' font-weight='950' letter-spacing='.12em' fill='#a8d8ce'>PROPOSED EDITS</text>
+      <g font-size='17' fill='#e9fbf8' font-weight='850'>
+        <rect x='22' y='76' width='224' height='52' rx='14' fill='rgba(255,255,255,.08)' stroke='#9ed9ca' stroke-opacity='.18'/><text x='40' y='108'>remove obsolete include?</text>
+        <rect x='22' y='146' width='224' height='52' rx='14' fill='rgba(255,255,255,.08)' stroke='#9ed9ca' stroke-opacity='.18'/><text x='40' y='178'>confirm DKIM selector</text>
+        <rect x='22' y='216' width='224' height='52' rx='14' fill='rgba(255,255,255,.08)' stroke='#9ed9ca' stroke-opacity='.18'/><text x='40' y='248'>stage DMARC policy path</text>
+      </g>
+      <rect x='22' y='288' width='190' height='28' rx='14' fill='url(#amberLane)'/><text x='42' y='307' font-family='ui-monospace, Menlo, monospace' font-size='13' font-weight='950' fill='#173047'>OWNER APPROVAL GATE</text>
+    </g>
+    <g transform='translate(730 34)'>
+      <rect width='276' height='326' rx='24' fill='#f3f8f4' stroke='#173047' stroke-opacity='.12'/>
+      <text x='22' y='42' font-family='ui-monospace, Menlo, monospace' font-size='14' font-weight='950' letter-spacing='.12em' fill='#2f745d'>READBACK RECEIPT</text>
+      <g font-size='17' fill='#132338' font-weight='850'>
+        <rect x='22' y='76' width='224' height='46' rx='14' fill='#fffdf7'/><text x='40' y='105'>Google resolver</text>
+        <rect x='22' y='140' width='224' height='46' rx='14' fill='#fffdf7'/><text x='40' y='169'>Cloudflare resolver</text>
+        <rect x='22' y='204' width='224' height='46' rx='14' fill='#fffdf7'/><text x='40' y='233'>authoritative check</text>
+      </g>
+      <rect x='22' y='288' width='190' height='28' rx='14' fill='url(#safeLane)'/><text x='42' y='307' font-family='ui-monospace, Menlo, monospace' font-size='13' font-weight='950' fill='#fffdf7'>CLOSE OR ROLLBACK</text>
+    </g>
+    <g stroke-width='5' stroke-linecap='round' fill='none'>
+      <path d='M310 198 C340 198 352 198 382 198' stroke='url(#safeLane)' stroke-dasharray='10 10'/>
+      <path d='M658 198 C688 198 700 198 730 198' stroke='url(#safeLane)' stroke-dasharray='10 10'/>
+    </g>
+  </g>
+  <g transform='translate(70 636)' font-family='ui-monospace, Menlo, monospace'>
+    <rect width='1040' height='42' rx='21' fill='#173047'/>
+    <text x='26' y='27' fill='#a8d8ce' font-size='16'>safe-change rule: diagnose publicly, stage edits, get owner approval, verify externally, keep rollback notes</text>
+  </g>
+</svg>"""
+(OUT / "mail-auth-change-lab.svg").write_text(mail_auth_change_lab_svg, encoding="utf-8")
+print(OUT / "mail-auth-change-lab.svg")
+
 (OUT / "dns-routing-map.svg").write_text(svg, encoding="utf-8")
 (OUT / "auth-stack-meter.svg").write_text(meter_svg, encoding="utf-8")
 (OUT / "resolver-verification-receipt.svg").write_text(resolver_svg, encoding="utf-8")
