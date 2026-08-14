@@ -437,5 +437,47 @@ dmarc_drift_digest_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180'
 </svg>"""
 (OUT / "dmarc-drift-digest.svg").write_text(dmarc_drift_digest_svg, encoding="utf-8")
 
-for name in ["dns-routing-map.svg", "auth-stack-meter.svg", "resolver-verification-receipt.svg", "email-trust-incident-drill.svg", "domain-trust-seal.svg", "sender-inventory-manifest.svg", "dmarc-drift-digest.svg"]:
+reply_loss_ledger_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='690' viewBox='0 0 1180 690' role='img' aria-labelledby='lossTitle lossDesc'>
+  <title id='lossTitle'>Missed reply loss ledger</title>
+  <desc id='lossDesc'>A commercial email trust ledger translating quiet leads, invoice nudges and campaign replies into a prioritised DNS readiness action order.</desc>
+  <defs>
+    <filter id='paperShadow' x='-16%' y='-18%' width='132%' height='142%'><feDropShadow dx='0' dy='24' stdDeviation='21' flood-color='#071a22' flood-opacity='.23'/></filter>
+    <pattern id='ledgerGrid' width='36' height='36' patternUnits='userSpaceOnUse'><path d='M36 0H0v36' fill='none' stroke='#173047' stroke-opacity='.07'/></pattern>
+    <linearGradient id='trustLane' x1='0' x2='1'><stop offset='0' stop-color='#2f745d'/><stop offset='.58' stop-color='#d6a43a'/><stop offset='1' stop-color='#9a4537'/></linearGradient>
+  </defs>
+  <rect width='1180' height='690' rx='44' fill='#eef2ec'/>
+  <rect x='28' y='28' width='1124' height='634' rx='34' fill='url(#ledgerGrid)'/>
+  <g filter='url(#paperShadow)'>
+    <rect x='72' y='68' width='1036' height='548' rx='34' fill='#fffdf7' stroke='#173047' stroke-opacity='.14'/>
+  </g>
+  <g font-family='Georgia,serif' fill='#132338'>
+    <text x='116' y='126' font-size='44' font-weight='700'>missed-reply loss ledger</text>
+    <text x='116' y='166' font-size='20' fill='#536172'>turn authentication fog into a commercial priority order before leads leak away</text>
+  </g>
+  <g transform='translate(116 218)' font-family='ui-sans-serif, system-ui, sans-serif'>
+    <rect width='948' height='62' rx='16' fill='#173047'/>
+    <g fill='#e9fbf8' font-size='15' font-weight='950' letter-spacing='.09em'>
+      <text x='24' y='39'>MAIL MOMENT</text><text x='290' y='39'>VISIBLE RISK</text><text x='548' y='39'>BUSINESS EFFECT</text><text x='796' y='39'>ACTION</text>
+    </g>
+    <g font-size='18' fill='#132338'>
+      <g transform='translate(0 88)'>
+        <rect width='948' height='72' rx='18' fill='#eef6f1'/><text x='24' y='43' font-weight='900'>Quote follow-up</text><text x='290' y='43'>duplicate SPF suspicion</text><text x='548' y='43'>reply confidence drops</text><text x='796' y='43' fill='#2f745d' font-weight='950'>verify senders</text>
+      </g>
+      <g transform='translate(0 178)'>
+        <rect width='948' height='72' rx='18' fill='#fff6dd'/><text x='24' y='43' font-weight='900'>Invoice reminder</text><text x='290' y='43'>DKIM selector unknown</text><text x='548' y='43'>client questions trust</text><text x='796' y='43' fill='#9c721d' font-weight='950'>confirm provider</text>
+      </g>
+      <g transform='translate(0 268)'>
+        <rect width='948' height='72' rx='18' fill='#f1ded8'/><text x='24' y='43' font-weight='900'>Newsletter launch</text><text x='290' y='43'>DMARC still p=none</text><text x='548' y='43'>no enforcement path</text><text x='796' y='43' fill='#98493b' font-weight='950'>stage policy</text>
+      </g>
+    </g>
+    <path d='M20 388H928' stroke='url(#trustLane)' stroke-width='8' stroke-linecap='round'/>
+    <g transform='translate(0 420)' font-family='ui-monospace, Menlo, monospace'>
+      <rect width='948' height='62' rx='18' fill='#173047'/>
+      <text x='24' y='39' fill='#a7d8ca' font-size='17'>OWNER-SAFE NEXT STEP: one-domain snapshot → sender inventory → resolver receipt → no DNS edits without approval</text>
+    </g>
+  </g>
+</svg>"""
+(OUT / "missed-reply-loss-ledger.svg").write_text(reply_loss_ledger_svg, encoding="utf-8")
+
+for name in ["dns-routing-map.svg", "auth-stack-meter.svg", "resolver-verification-receipt.svg", "email-trust-incident-drill.svg", "domain-trust-seal.svg", "sender-inventory-manifest.svg", "dmarc-drift-digest.svg", "missed-reply-loss-ledger.svg"]:
     print(OUT / name)
