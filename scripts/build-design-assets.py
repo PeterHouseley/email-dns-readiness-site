@@ -387,5 +387,55 @@ print(OUT / "mail-auth-change-lab.svg")
 (OUT / "email-trust-incident-drill.svg").write_text(incident_svg, encoding="utf-8")
 (OUT / "domain-trust-seal.svg").write_text(tls_seal_svg, encoding="utf-8")
 (OUT / "sender-inventory-manifest.svg").write_text(sender_inventory_svg, encoding="utf-8")
-for name in ["dns-routing-map.svg", "auth-stack-meter.svg", "resolver-verification-receipt.svg", "email-trust-incident-drill.svg", "domain-trust-seal.svg", "sender-inventory-manifest.svg"]:
+dmarc_drift_digest_svg = """<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='700' viewBox='0 0 1180 700' role='img' aria-labelledby='driftTitle driftDesc'>
+  <title id='driftTitle'>DMARC drift digest</title>
+  <desc id='driftDesc'>A premium operational digest showing baseline mail authentication records, live DNS drift, sender lane evidence and an owner action receipt.</desc>
+  <defs>
+    <filter id='shadow' x='-16%' y='-18%' width='132%' height='142%'><feDropShadow dx='0' dy='26' stdDeviation='22' flood-color='#020f16' flood-opacity='.34'/></filter>
+    <pattern id='grid' width='38' height='38' patternUnits='userSpaceOnUse'><path d='M38 0H0v38' fill='none' stroke='#9ed9ca' stroke-opacity='.09'/></pattern>
+    <linearGradient id='lane' x1='0' x2='1'><stop offset='0' stop-color='#72e2a3'/><stop offset='.58' stop-color='#ffd36e'/><stop offset='1' stop-color='#ff8f83'/></linearGradient>
+    <linearGradient id='panel' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#fffdf7'/><stop offset='1' stop-color='#e6f1ec'/></linearGradient>
+  </defs>
+  <rect width='1180' height='700' rx='46' fill='#06161d'/>
+  <rect x='28' y='28' width='1124' height='644' rx='34' fill='url(#grid)' stroke='#9ed9ca' stroke-opacity='.16'/>
+  <g font-family='Georgia,serif' fill='#e9fbf8'>
+    <text x='74' y='100' font-size='44' font-weight='700'>DMARC drift digest</text>
+    <text x='74' y='140' font-size='20' fill='#a8d8ce'>monthly public-DNS readback translated into one owner action receipt</text>
+  </g>
+  <g transform='translate(74 190)' filter='url(#shadow)' font-family='ui-sans-serif, system-ui, sans-serif'>
+    <rect width='1032' height='404' rx='34' fill='url(#panel)'/>
+    <g transform='translate(34 34)'>
+      <rect width='276' height='286' rx='24' fill='#102f38'/>
+      <text x='22' y='42' font-family='ui-monospace, Menlo, monospace' font-size='14' font-weight='950' letter-spacing='.12em' fill='#a8d8ce'>BASELINE</text>
+      <text x='22' y='92' fill='#e9fbf8' font-size='28' font-weight='900'>known-good map</text>
+      <g fill='#e9fbf8' font-size='17' font-weight='850'>
+        <text x='22' y='148'>SPF: owner-approved</text><text x='22' y='194'>DKIM: selector logged</text><text x='22' y='240'>DMARC: p=none watched</text>
+      </g>
+    </g>
+    <g transform='translate(378 34)'>
+      <rect width='276' height='286' rx='24' fill='#fff6dd' stroke='#d7ad4f' stroke-opacity='.28'/>
+      <text x='22' y='42' font-family='ui-monospace, Menlo, monospace' font-size='14' font-weight='950' letter-spacing='.12em' fill='#9c721d'>LIVE DRIFT</text>
+      <text x='22' y='92' fill='#132338' font-size='28' font-weight='900'>what changed?</text>
+      <g fill='#132338' font-size='17' font-weight='850'>
+        <text x='22' y='148'>new CRM include found</text><text x='22' y='194'>selector mismatch amber</text><text x='22' y='240'>resolver readback pending</text>
+      </g>
+    </g>
+    <g transform='translate(722 34)'>
+      <rect width='276' height='286' rx='24' fill='#eaf7f2' stroke='#2f745d' stroke-opacity='.22'/>
+      <text x='22' y='42' font-family='ui-monospace, Menlo, monospace' font-size='14' font-weight='950' letter-spacing='.12em' fill='#2f745d'>OWNER RECEIPT</text>
+      <text x='22' y='92' fill='#132338' font-size='28' font-weight='900'>action note</text>
+      <g fill='#132338' font-size='17' font-weight='850'>
+        <text x='22' y='148'>confirm sender owner</text><text x='22' y='194'>approve or rollback</text><text x='22' y='240'>file monthly receipt</text>
+      </g>
+    </g>
+    <path d='M310 178 C340 178 348 178 378 178 M654 178 C684 178 692 178 722 178' stroke='url(#lane)' stroke-width='7' fill='none' stroke-linecap='round' stroke-dasharray='12 12'/>
+  </g>
+  <g transform='translate(74 626)' font-family='ui-monospace, Menlo, monospace'>
+    <rect width='1032' height='46' rx='23' fill='#0c2730' stroke='#9ed9ca' stroke-opacity='.18'/>
+    <text x='26' y='30' fill='#a8d8ce' font-size='16'>monitoring rule: compare baseline, identify sender lane, verify public resolvers, send a short owner-safe action receipt</text>
+  </g>
+</svg>"""
+(OUT / "dmarc-drift-digest.svg").write_text(dmarc_drift_digest_svg, encoding="utf-8")
+
+for name in ["dns-routing-map.svg", "auth-stack-meter.svg", "resolver-verification-receipt.svg", "email-trust-incident-drill.svg", "domain-trust-seal.svg", "sender-inventory-manifest.svg", "dmarc-drift-digest.svg"]:
     print(OUT / name)
