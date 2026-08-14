@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="720" viewBox="0 0 1180 720" role="img" aria-labelledby="title desc">
+  <title id="title">Provider rollout passport for business email senders</title>
+  <desc id="desc">A premium email infrastructure passport showing a new sender moving through owner approval, SPF, DKIM, DMARC, resolver checks and a monthly drift stamp.</desc>
+  <defs>
+    <filter id="shadow" x="-16%" y="-18%" width="132%" height="140%"><feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#06161d" flood-opacity=".32"/></filter>
+    <pattern id="pin" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0v34" fill="none" stroke="#9ed9ca" stroke-opacity=".09"/></pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06161d"/><stop offset=".55" stop-color="#102f38"/><stop offset="1" stop-color="#173047"/></linearGradient>
+    <linearGradient id="lane" x1="0" x2="1"><stop offset="0" stop-color="#72e2a3"/><stop offset=".55" stop-color="#ffd36e"/><stop offset="1" stop-color="#8fe1ff"/></linearGradient>
+  </defs>
+  <rect width="1180" height="720" rx="46" fill="url(#bg)"/>
+  <rect x="28" y="28" width="1124" height="664" rx="36" fill="url(#pin)" stroke="#9ed9ca" stroke-opacity=".18"/>
+  <g font-family="Georgia,serif">
+    <text x="74" y="96" fill="#e9fbf8" font-size="43" font-weight="700">sender rollout passport</text>
+    <text x="74" y="134" fill="#a8d8ce" font-size="21">turn every new platform into an approved, checked, reversible mail route</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="74" y="180" width="1032" height="430" rx="34" fill="#fffdf7"/>
+  </g>
+  <g transform="translate(116 224)" font-family="ui-sans-serif,system-ui,sans-serif">
+    <rect x="0" y="44" width="948" height="8" rx="4" fill="url(#lane)"/>
+    <g font-weight="950" text-anchor="middle">
+      <g transform="translate(0 48)"><circle r="44" fill="#eaf7f2" stroke="#2f745d" stroke-width="5"/><text y="6" font-size="15" fill="#173047">OWNER</text></g>
+      <g transform="translate(190 48)"><circle r="44" fill="#eef6f1" stroke="#2f745d" stroke-width="5"/><text y="6" font-size="18" fill="#173047">SPF</text></g>
+      <g transform="translate(380 48)"><circle r="44" fill="#fff4d8" stroke="#a87420" stroke-width="5"/><text y="6" font-size="17" fill="#173047">DKIM</text></g>
+      <g transform="translate(570 48)"><circle r="44" fill="#fff4d8" stroke="#a87420" stroke-width="5"/><text y="6" font-size="15" fill="#173047">DMARC</text></g>
+      <g transform="translate(760 48)"><circle r="44" fill="#e9f7fb" stroke="#427e93" stroke-width="5"/><text y="6" font-size="15" fill="#173047">READ</text></g>
+      <g transform="translate(948 48)"><circle r="44" fill="#173047" stroke="#8fe1ff" stroke-width="5"/><text y="6" font-size="14" fill="#e9fbf8">DRIFT</text></g>
+    </g>
+    <g transform="translate(0 132)" fill="#132338">
+      <rect width="292" height="158" rx="24" fill="#f1f7f3" stroke="#173047" stroke-opacity=".1"/>
+      <text x="22" y="40" font-family="ui-monospace,Menlo,monospace" font-size="14" font-weight="950" letter-spacing=".12em" fill="#2f745d">PLATFORM ADDED</text>
+      <text x="22" y="82" font-size="28" font-weight="900">invoice app</text>
+      <text x="22" y="116" font-size="17" fill="#536172" font-weight="750">Named owner, sender purpose and rollback contact captured before DNS edits.</text>
+    </g>
+    <g transform="translate(328 132)" fill="#132338">
+      <rect width="292" height="158" rx="24" fill="#fff7df" stroke="#173047" stroke-opacity=".1"/>
+      <text x="22" y="40" font-family="ui-monospace,Menlo,monospace" font-size="14" font-weight="950" letter-spacing=".12em" fill="#9c721d">AUTH CHECK</text>
+      <text x="22" y="82" font-size="28" font-weight="900">safe launch gate</text>
+      <text x="22" y="116" font-size="17" fill="#6f5a2a" font-weight="750">SPF include, DKIM selector, DMARC alignment and TTL notes checked as one lane.</text>
+    </g>
+    <g transform="translate(656 132)" fill="#132338">
+      <rect width="292" height="158" rx="24" fill="#eaf7fb" stroke="#173047" stroke-opacity=".1"/>
+      <text x="22" y="40" font-family="ui-monospace,Menlo,monospace" font-size="14" font-weight="950" letter-spacing=".12em" fill="#427e93">PASSPORT STAMP</text>
+      <text x="22" y="82" font-size="28" font-weight="900">approved sender</text>
+      <text x="22" y="116" font-size="17" fill="#536172" font-weight="750">Resolver receipt filed, monthly monitoring knows what should exist and what changed.</text>
+    </g>
+  </g>
+  <g transform="translate(74 642)" font-family="ui-monospace,Menlo,monospace">
+    <rect width="1032" height="44" rx="22" fill="#0c2730" stroke="#9ed9ca" stroke-opacity=".2"/>
+    <text x="26" y="29" fill="#a8d8ce" font-size="16">passport rule: no new mail sender goes live until owner, purpose, DNS evidence, resolver readback and rollback path are visible</text>
+  </g>
+</svg>
