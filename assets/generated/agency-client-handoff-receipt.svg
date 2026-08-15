@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="690" viewBox="0 0 1180 690" role="img" aria-labelledby="title desc">
+  <title id="title">Agency client handoff receipt for email DNS readiness</title>
+  <desc id="desc">A premium operational receipt showing a marketing agency handing a client domain through sender inventory, DNS evidence, safe change order and public resolver proof.</desc>
+  <defs>
+    <filter id="shadow" x="-18%" y="-18%" width="136%" height="140%"><feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#06161d" flood-opacity=".28"/></filter>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0v36" fill="none" stroke="#9ed9ca" stroke-opacity=".10"/></pattern>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#102c35"/><stop offset="1" stop-color="#173f3d"/></linearGradient>
+    <linearGradient id="lane" x1="0" x2="1"><stop offset="0" stop-color="#72e2a3"/><stop offset=".58" stop-color="#ffd36e"/><stop offset="1" stop-color="#e98b79"/></linearGradient>
+  </defs>
+  <rect width="1180" height="690" rx="46" fill="#071a22"/>
+  <rect x="28" y="28" width="1124" height="634" rx="34" fill="url(#grid)" stroke="#9ed9ca" stroke-opacity=".16"/>
+  <g filter="url(#shadow)">
+    <rect x="72" y="70" width="1036" height="548" rx="36" fill="url(#panel)" stroke="#9ed9ca" stroke-opacity=".22"/>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif">
+    <text x="116" y="134" fill="#e9fbf8" font-size="44" font-weight="700">agency client handoff receipt</text>
+    <text x="116" y="174" fill="#a8d8ce" font-size="21">a public-DNS proof pack for agencies launching forms, newsletters, CRMs and client mail</text>
+  </g>
+  <g transform="translate(116 230)" font-family="ui-sans-serif, system-ui, sans-serif">
+    <rect width="948" height="118" rx="28" fill="#ffffff" fill-opacity=".07" stroke="#9ed9ca" stroke-opacity=".20"/>
+    <path d="M70 59H878" stroke="url(#lane)" stroke-width="10" stroke-linecap="round"/>
+    <g font-size="15" font-weight="950" text-anchor="middle">
+      <g transform="translate(70 59)"><circle r="34" fill="#0c282d" stroke="#72e2a3" stroke-width="5"/><text y="5" fill="#e9fbf8">FORM</text></g>
+      <g transform="translate(272 59)"><circle r="34" fill="#0c282d" stroke="#72e2a3" stroke-width="5"/><text y="5" fill="#e9fbf8">CRM</text></g>
+      <g transform="translate(474 59)"><circle r="34" fill="#0c282d" stroke="#ffd36e" stroke-width="5"/><text y="5" fill="#e9fbf8">NEWS</text></g>
+      <g transform="translate(676 59)"><circle r="34" fill="#0c282d" stroke="#ffd36e" stroke-width="5"/><text y="5" fill="#e9fbf8">SPF</text></g>
+      <g transform="translate(878 59)"><circle r="34" fill="#0c282d" stroke="#e98b79" stroke-width="5"/><text y="5" fill="#e9fbf8">DMARC</text></g>
+    </g>
+  </g>
+  <g transform="translate(116 402)" font-family="ui-sans-serif, system-ui, sans-serif">
+    <g>
+      <rect width="292" height="136" rx="24" fill="#fffdf7"/>
+      <text x="24" y="38" font-size="14" font-weight="950" letter-spacing=".12em" fill="#2f745d">AGENCY INTAKE</text>
+      <text x="24" y="76" font-size="25" font-weight="900" fill="#132338">sender inventory</text>
+      <text x="24" y="108" font-size="17" fill="#536172">website forms, CRM, campaign tools.</text>
+    </g>
+    <g transform="translate(328 0)">
+      <rect width="292" height="136" rx="24" fill="#fff7de"/>
+      <text x="24" y="38" font-size="14" font-weight="950" letter-spacing=".12em" fill="#9c721d">CLIENT-SAFE ORDER</text>
+      <text x="24" y="76" font-size="25" font-weight="900" fill="#132338">DNS edit note</text>
+      <text x="24" y="108" font-size="17" fill="#6f5a2a">approve before touching records.</text>
+    </g>
+    <g transform="translate(656 0)">
+      <rect width="292" height="136" rx="24" fill="#eaf7f2"/>
+      <text x="24" y="38" font-size="14" font-weight="950" letter-spacing=".12em" fill="#2f745d">CLOSE RECEIPT</text>
+      <text x="24" y="76" font-size="25" font-weight="900" fill="#132338">resolver readback</text>
+      <text x="24" y="108" font-size="17" fill="#536172">Google, Cloudflare, authoritative.</text>
+    </g>
+  </g>
+  <g transform="translate(846 104) rotate(-7)" font-family="ui-monospace, Menlo, Consolas, monospace">
+    <rect width="190" height="190" rx="95" fill="none" stroke="#72e2a3" stroke-width="5" stroke-dasharray="12 8" opacity=".82"/>
+    <text x="95" y="84" text-anchor="middle" fill="#72e2a3" font-size="18" font-weight="950">NO PASSWORDS</text>
+    <text x="95" y="114" text-anchor="middle" fill="#e9fbf8" font-size="26" font-weight="950">FILED</text>
+  </g>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace">
+    <rect x="116" y="564" width="948" height="44" rx="16" fill="#0c2730" stroke="#9ed9ca" stroke-opacity=".20"/>
+    <text x="142" y="592" fill="#a8d8ce" font-size="16">BUILT FOR AGENCIES: launch client senders without mystery DNS edits, mailbox access or deliverability folklore</text>
+  </g>
+</svg>
