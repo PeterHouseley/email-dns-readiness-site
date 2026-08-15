@@ -1,0 +1,50 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1180' height='700' viewBox='0 0 1180 700' role='img' aria-labelledby='ledgerTitle ledgerDesc'>
+  <title id='ledgerTitle'>Executive email trust ledger</title>
+  <desc id='ledgerDesc'>A polished owner-safe ledger showing sender approvals, DNS evidence, resolver readbacks and monthly drift receipts for email authentication monitoring.</desc>
+  <defs>
+    <filter id='shadow' x='-18%' y='-18%' width='136%' height='142%'><feDropShadow dx='0' dy='24' stdDeviation='22' flood-color='#071a22' flood-opacity='.28'/></filter>
+    <pattern id='ledgerLines' width='52' height='52' patternUnits='userSpaceOnUse'><path d='M0 52H52 M52 0V52' fill='none' stroke='#173047' stroke-opacity='.07'/></pattern>
+    <linearGradient id='header' x1='0' x2='1'><stop offset='0' stop-color='#173047'/><stop offset='1' stop-color='#2f745d'/></linearGradient>
+    <linearGradient id='stamp' x1='0' x2='1'><stop offset='0' stop-color='#d7b75d'/><stop offset='1' stop-color='#9c721d'/></linearGradient>
+  </defs>
+  <rect width='1180' height='700' rx='46' fill='#eef2ec'/>
+  <rect x='28' y='28' width='1124' height='644' rx='36' fill='url(#ledgerLines)'/>
+  <g filter='url(#shadow)'>
+    <rect x='76' y='72' width='1028' height='556' rx='34' fill='#fffdf7' stroke='#173047' stroke-opacity='.14'/>
+  </g>
+  <rect x='76' y='72' width='1028' height='112' rx='34' fill='url(#header)'/>
+  <g font-family='Georgia,serif'>
+    <text x='116' y='132' fill='#fffdf7' font-size='42' font-weight='700'>executive trust ledger</text>
+    <text x='116' y='166' fill='#cde5dc' font-size='20'>the monthly email-auth record a business owner can actually understand</text>
+  </g>
+  <g transform='translate(806 104)' font-family='ui-monospace, Menlo, Consolas, monospace'>
+    <rect width='252' height='58' rx='18' fill='rgba(255,255,255,.12)' stroke='#cde5dc' stroke-opacity='.24'/>
+    <text x='22' y='36' fill='#fffdf7' font-size='17' font-weight='950'>NO PASSWORDS · PUBLIC DNS</text>
+  </g>
+  <g transform='translate(116 228)' font-family='ui-sans-serif, system-ui, sans-serif'>
+    <g font-size='15' font-weight='950' letter-spacing='.1em' fill='#536172'>
+      <text x='0' y='0'>SENDER</text><text x='260' y='0'>EVIDENCE</text><text x='520' y='0'>READBACK</text><text x='760' y='0'>OWNER ACTION</text>
+    </g>
+    <g transform='translate(0 28)' font-size='19' fill='#132338'>
+      <rect width='948' height='78' rx='19' fill='#eef6f1'/>
+      <text x='24' y='48' font-weight='900'>Microsoft 365</text><text x='260' y='48'>SPF + MX aligned</text><text x='520' y='48' fill='#2f745d' font-weight='900'>PASS</text><text x='760' y='48'>file receipt</text>
+    </g>
+    <g transform='translate(0 122)' font-size='19' fill='#132338'>
+      <rect width='948' height='78' rx='19' fill='#fff6dd'/>
+      <text x='24' y='48' font-weight='900'>Newsletter app</text><text x='260' y='48'>DKIM clue only</text><text x='520' y='48' fill='#9c721d' font-weight='900'>AMBER</text><text x='760' y='48'>confirm selector</text>
+    </g>
+    <g transform='translate(0 216)' font-size='19' fill='#132338'>
+      <rect width='948' height='78' rx='19' fill='#f1ded8'/>
+      <text x='24' y='48' font-weight='900'>Old CRM</text><text x='260' y='48'>SPF include found</text><text x='520' y='48' fill='#98493b' font-weight='900'>REVIEW</text><text x='760' y='48'>approve/remove</text>
+    </g>
+    <path d='M24 360H924' stroke='#d7d1bd' stroke-width='2'/>
+    <g transform='translate(0 386)'>
+      <rect width='948' height='74' rx='24' fill='#173047'/>
+      <text x='24' y='30' fill='#cde5dc' font-family='ui-monospace, Menlo, monospace' font-size='15' font-weight='950'>MONTHLY DIGEST CLOSE</text>
+      <text x='24' y='54' fill='#fffdf7' font-size='19' font-weight='850'>baseline compared · drift explained · DNS editor note ready · owner-safe next action</text>
+      <circle cx='876' cy='37' r='48' fill='none' stroke='url(#stamp)' stroke-width='7'/>
+      <text x='876' y='33' text-anchor='middle' fill='#d7b75d' font-family='ui-monospace, Menlo, monospace' font-size='13' font-weight='950'>RECEIPT</text>
+      <text x='876' y='51' text-anchor='middle' fill='#d7b75d' font-family='ui-monospace, Menlo, monospace' font-size='13' font-weight='950'>FILED</text>
+    </g>
+  </g>
+</svg>
