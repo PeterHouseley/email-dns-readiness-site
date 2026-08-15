@@ -500,6 +500,26 @@
       </figure>
     </section>
 
+    <section class="bounce-ledger" aria-label="Bounced mail evidence ledger">
+      <div class="bounce-copy">
+        <p class="kicker">Added this run · bounce evidence ledger</p>
+        <h2>When mail bounces, turn the failure into a repair receipt the owner can understand.</h2>
+        <p>This upgrade adds a sharper incident lane: the snapshot now shows how bounce text, MX route, SPF/DKIM/DMARC clues and public resolver evidence become one safe action note before anyone edits DNS or retries a campaign.</p>
+        <div class="bounce-rules" aria-label="Bounce evidence safeguards">
+          <span><b>01</b> Capture bounce wording</span>
+          <span><b>02</b> Match it to public DNS evidence</span>
+          <span><b>03</b> Close with repair order + resolver receipt</span>
+        </div>
+      </div>
+      <div class="bounce-board" role="img" aria-label="Email bounce evidence ledger with SMTP error, authentication checks and resolver receipt">
+        <div class="bounce-ribbon">BOUNCE LEDGER / PUBLIC EVIDENCE ONLY</div>
+        <code class="error">550-5.7.26 unauthenticated sender rejected</code>
+        <code class="warn">SPF: includes old CRM · DKIM selector not confirmed</code>
+        <code class="ok">MX route: Microsoft 365 · resolver readback captured</code>
+        <div class="bounce-receipt">Owner action: approve sender inventory before retrying.</div>
+      </div>
+    </section>
+
     <section class="conversion">
       <p class="kicker">Fast validation path</p>
       <h2>Start with one domain. Upgrade only if the fix list is useful.</h2>
